@@ -13,6 +13,7 @@ public class Usuario {
         this.idade = idade;
         this.cpf = cpf;
     }
+    
     public String getName() {
         return name;
     }
