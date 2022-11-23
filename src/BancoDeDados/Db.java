@@ -8,39 +8,42 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class Db {
+
     private static Connection conn = null;
 
-    public static Connection getConnection() throws Exception{
-        if(conn == null){
-            try{
-                Properties properties = loadProperties(); 
+    public static Connection getConnection() {
+
+        if (conn == null) {
+
+            try {
+                Properties properties = loadProperties();
                 String url = properties.getProperty("dburl");
                 DriverManager.getConnection(url, properties);
-            }catch(SQLException e){
-                throw new Exception(e.getMessage());
+
+            } catch (SQLException e) {
+                throw new DbExeption(e.getMessage());
             }
         }
         return conn;
     }
 
-    public static Properties loadProperties() throws Exception {
-        try (FileInputStream fs = new FileInputStream("db.properties")) {
+    public static Properties loadProperties(){
+        try (FileInputStream fs = new FileInputStream("dp.properties.txt")) {
             Properties properties = new Properties();
             properties.load(fs);
             return properties;
 
         } catch (IOException e) {
-            throw new Exception(e.getMessage());
+            throw new DbExeption(e.getMessage());
         }
     }
 
-
-    public static void closeConnection() throws Exception{
-        if(conn != null){
-            try{
+    public static void closeConnection(){
+        if (conn != null) {
+            try {
                 conn.close();
-            }catch(SQLException e){
-                throw new Exception(e.getMessage());
+            } catch (SQLException e) {
+                throw new DbExeption(e.getMessage());
             }
         }
 

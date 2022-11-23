@@ -2,8 +2,7 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\java-libs\\JDBC-connectors\\mysql-connector-java-8.0.25.jar"
+        "lib/**/*.jar"
     ],
     "sqltools.connections": [
         {
@@ -13,11 +12,11 @@
             "previewLimit": 50,
             "server": "localhost",
             "port": 3306,
+            "askForPassword": true,
             "driver": "MySQL",
-            "name": "teste",
-            "database": "coursejdbc",
-            "username": "root",
-            "password": "1234567"
+            "name": "DbCadastro",
+            "database": "cadastro",
+            "username": "root"
         }
     ]
 }

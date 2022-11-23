@@ -1,4 +1,3 @@
-user=developer
-password=1234567
-dburl=jdbc:mysql://localhost:3306/coursejdbc
-useSSL=false
+username=root
+dburl=jdbc:mysql://localhost:3306/cadastro
+Password: true
