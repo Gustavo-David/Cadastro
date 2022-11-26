@@ -1,24 +1,6 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "mysql-connector-j-8.0.31.jar",
-        "c:\\java-libs\\JDBC-connectors\\mysql-connector-j-8.0.31.jar"
-    ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "askForPassword": true,
-            "driver": "MySQL",
-            "name": "DbCadastro",
-            "database": "cadastro",
-            "username": "root"
-        }
+        "c:\\java-libs\\JDBC-connectors\\mysql-connector-java-8.0.25.jar"
     ]
 }

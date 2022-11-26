@@ -1,4 +1,4 @@
 user=root
 dburl=jdbc:mysql://localhost:3306/cadastro
 useSSL=false
-Password:true
+Password:1234567
