@@ -37,10 +37,6 @@ public class Db {
 			throw new DbException(e.getMessage());
 		}
 	}
-	
-
-
-
     
 	public static void closeStatement(Statement st) {
 
